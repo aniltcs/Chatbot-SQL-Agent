@@ -66,9 +66,25 @@ toolkit = SQLDatabaseToolkit(db=db, llm=llm, include_tables="all")
 tools = toolkit.get_tools()
 
 system_prompt = """
-You are an agent designed to interact with a SQL database.
-Given an input question, create a syntactically correct query to run,
-then look at the results of the query and return the answer.
+You are an intelligent agent designed to interact with a SQL database.
+The database has the following tables and columns:
+
+Table STUDENT:
+- STUDENT_ID (int, primary key)
+- NAME (varchar)
+- CLASS (varchar)
+- SECTION (varchar)
+- MARKS (int)
+
+Table STUDENT_INFO:
+- INFO_ID (int, primary key)
+- STUDENT_ID (int, foreign key to STUDENT)
+- DOB (date)
+- ADDRESS (varchar)
+- PHONE (varchar)
+
+When given a user question, write a syntactically correct SQL query to get the answer.
+If needed, join tables appropriately. Then return only the query results, not extra text.
 """
 
 ## create agent
