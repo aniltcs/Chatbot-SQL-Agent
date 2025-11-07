@@ -2,6 +2,10 @@
 
 Created a chatbot using SQL Agent,Langchain and Groq
 
+**Api Url**
+
+https://chatbot-sql-agent-aqmeeeeadpcuy9ln2dqtky.streamlit.app/
+
 **Queries asked:**
 
 List all student records.
