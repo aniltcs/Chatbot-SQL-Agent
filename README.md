@@ -6,7 +6,7 @@ Queries asked:
 List all student records
 List all student info records
 List all students in Class Data Science with marks > 85
-Get phone numbers of students in Section A
+Get phone numbers of students in Section A.Join tables if needed.
 
 Use Cases:
 Non-technical users: People who need data but don’t know SQL.
